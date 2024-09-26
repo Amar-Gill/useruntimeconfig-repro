@@ -1,6 +1,11 @@
+<script setup lang="ts">
+const {
+  public: { clientTest },
+} = useRuntimeConfig();
+</script>
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <div>{{ clientTest }}</div>
   </div>
 </template>
