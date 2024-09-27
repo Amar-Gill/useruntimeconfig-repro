@@ -2,10 +2,13 @@
 const {
   public: { clientTest },
 } = useRuntimeConfig();
+
+const { data } = useFetch("/api/test");
 </script>
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <div>{{ clientTest }}</div>
+    <div>client side env var: {{ clientTest }}</div>
+    <div>server side env var: {{ data }}</div>
   </div>
 </template>
